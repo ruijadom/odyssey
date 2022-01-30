@@ -19,7 +19,7 @@ const resolvers = {
   Mutation: {
 
     // incrementºs a track´s numberOfViews property
-    incrementTrackViews: async(_, { id }, { dataSources }, info) => {
+    incrementTrackViews: async(_, { id }, { dataSources }) => {
       try {
         const track = await dataSources.trackAPI.incrementTrackViews(id);
 
