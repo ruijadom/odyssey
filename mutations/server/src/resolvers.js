@@ -20,7 +20,7 @@ const resolvers = {
 
     // incrementºs a track´s numberOfViews property
     incrementTrackViews: async(_, { id }, { dataSources }, info) => {
-      const track = await datasource.trackAPI.incrementTrackViews(id);
+      const track = await dataSources.trackAPI.incrementTrackViews(id);
 
       return {
         code: 200,
