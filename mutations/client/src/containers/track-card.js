@@ -9,18 +9,18 @@ import { gql, useMutation} from '@apollo/client'
  * Mutation to increment a track´s numberOfViews
  * (expored for tests)
  */
-export const INCREMENT_TRACK_VIEWS = gql`
-mutation IncrementTrackViews($incrementTrackViewsId: ID!) {
-  incrementTrackViews(id: $incrementTrackViewsId) {
-    code
-    success
-    message
-    track {
-      id
-      numberOfViews
-    }
-  }
-}
+ export const INCREMENT_TRACK_VIEWS = gql`
+ mutation IncrementTrackViewsMutation($incrementTrackViewsId: ID!) {
+   incrementTrackViews(id: $incrementTrackViewsId) {
+     code
+     success
+     message
+     track {
+       id
+       numberOfViews
+     }
+   }
+ }
 `;
 
 /**
